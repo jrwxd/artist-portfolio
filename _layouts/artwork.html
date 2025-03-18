@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="artwork">
+  <div class="container">
+    <div class="artwork-header">
+      <h1>{{ page.title }}</h1>
+      <p class="artwork-meta">{{ page.medium }}, {{ page.dimensions }}, {{ page.year }}</p>
+    </div>
+    
+    <div class="artwork-content">
+      <div class="artwork-image">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      </div>
+      
+      <div class="artwork-details">
+        <div class="artwork-description">
+          {{ content }}
+        </div>
+        
+        {% if page.price %}
+        <div class="artwork-price">
+          <p>Price: {{ page.price }}</p>
+          <a href="/contact" class="button">Inquire</a>
+        </div>
+        {% endif %}
+        
+        {% if page.exhibition %}
+        <div class="artwork-exhibition">
+          <p>Exhibited at: <a href="/exhibitions#{{ page.exhibition | slugify }}">{{ page.exhibition }}</a></p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="artwork-navigation">
+      <div class="prev-next">
+        {% if page.previous %}
+          <a href="{{ page.previous.url }}" class="prev">&larr; Previous</a>
+        {% endif %}
+        {% if page.next %}
+          <a href="{{ page.next.url }}" class="next">Next &rarr;</a>
+        {% endif %}
+      </div>
+      <a href="/artwork" class="all-works">View All Work</a>
+    </div>
+  </div>
+</article>

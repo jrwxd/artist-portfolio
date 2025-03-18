@@ -1,0 +1,289 @@
+// Header
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid $border-color;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    a {
+      color: $primary-color;
+      
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.main-nav {
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-left: 1.5rem;
+  }
+  
+  a {
+    color: $primary-color;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  padding: 3rem 0;
+  background-color: $light-color;
+  border-top: 1px solid $border-color;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $grid-gap;
+  margin-bottom: 2rem;
+}
+
+.footer-info,
+.footer-contact,
+.footer-social {
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid $border-color;
+  font-size: 0.9rem;
+  color: $secondary-color;
+}
+
+// Hero
+.hero {
+  padding: 6rem 0;
+  background-color: $light-color;
+  text-align: center;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: $secondary-color;
+  }
+}
+
+// Gallery
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $grid-gap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.artwork-card {
+  overflow: hidden;
+  
+  img {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+    
+    h3 {
+      color: $accent-color;
+    }
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    transition: color 0.2s ease;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: $secondary-color;
+    margin: 0;
+  }
+}
+
+// Posts
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $grid-gap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post-card {
+  background-color: $light-color;
+  padding: 1.5rem;
+  border-radius: 5px;
+  
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  time {
+    display: block;
+    font-size: 0.9rem;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+}
+
+// Artwork page
+.artwork {
+  padding: 3rem 0;
+}
+
+.artwork-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.artwork-meta {
+  color: $secondary-color;
+  font-style: italic;
+}
+
+.artwork-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: $grid-gap;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.artwork-image {
+  img {
+    width: 100%;
+  }
+}
+
+.artwork-details {
+  > div {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.artwork-price {
+  background-color: $light-color;
+  padding: 1.5rem;
+  border-radius: 5px;
+  
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+
+.artwork-navigation {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev-next {
+  display: flex;
+  gap: 1rem;
+}
+
+// Post page
+.post {
+  padding: 3rem 0;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  
+  time {
+    display: block;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+  }
+}
+
+.post-categories {
+  display: flex;
+  gap: 0.5rem;
+  
+  .category {
+    background-color: $light-color;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $breakpoint-md) {
+  .site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .main-nav {
+    margin-top: 1rem;
+    
+    ul {
+      justify-content: center;
+    }
+    
+    li {
+      margin: 0 0.75rem;
+    }
+  }
+  
+  .hero {
+    padding: 4rem 0;
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

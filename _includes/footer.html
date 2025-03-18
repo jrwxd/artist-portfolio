@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>{{ site.title }}</h3>
+        <p>{{ site.description }}</p>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        {% if site.phone %}<p>Phone: {{ site.phone }}</p>{% endif %}
+      </div>
+      
+      <div class="footer-social">
+        <h3>Follow</h3>
+        <div class="social-links">
+          {% if site.social.instagram %}<a href="{{ site.social.instagram }}" target="_blank">Instagram</a>{% endif %}
+          {% if site.social.facebook %}<a href="{{ site.social.facebook }}" target="_blank">Facebook</a>{% endif %}
+          {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank">Twitter</a>{% endif %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

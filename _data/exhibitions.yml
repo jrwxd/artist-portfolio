@@ -1,0 +1,29 @@
+- title: "Exhibition Title 1"
+  status: current
+  venue: "Gallery Name"
+  location: "City, Country"
+  start_date: 2024-02-15
+  end_date: 2024-04-30
+  description: "Description of the exhibition, the concept, and the works on display."
+  image: "/assets/images/exhibitions/exhibition1.jpg"
+  link: "https://gallery-website.com/exhibition"
+
+- title: "Exhibition Title 2"
+  status: upcoming
+  venue: "Museum Name"
+  location: "City, Country"
+  start_date: 2024-06-01
+  end_date: 2024-08-15
+  description: "Description of the upcoming exhibition including theme and featured works."
+  image: "/assets/images/exhibitions/exhibition2.jpg"
+  link: "https://museum-website.com/exhibition"
+
+- title: "Exhibition Title 3"
+  status: past
+  venue: "Art Space"
+  location: "City, Country"
+  start_date: 2023-10-01
+  end_date: 2023-12-15
+  description: "Description of the past exhibition including theme and featured works."
+  image: "/assets/images/exhibitions/exhibition3.jpg"
+  link: "https://artspace-website.com/exhibition"
