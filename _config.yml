@@ -3,8 +3,8 @@ title: Artist Name | Portfolio
 email: artist@example.com
 description: >-
   Portfolio website showcasing the artwork and exhibitions of Artist Name.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/artist-portfolio"  # Only if your repo is not using a custom domain
+url: "https://jrwxd.github.io"
 
 # Build settings
 markdown: kramdown
