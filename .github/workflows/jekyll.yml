@@ -21,7 +21,11 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/jrwxd/artist-portolio.git
+          git checkout -B gh-pages
+          git add -A
+          git commit -m "Deploy: $(date)"
+          git push -f origin gh-pages
