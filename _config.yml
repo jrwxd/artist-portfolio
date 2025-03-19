@@ -4,7 +4,7 @@ email: artist@example.com
 description: >-
   Portfolio website showcasing the artwork and exhibitions of Artist Name.
 baseurl: "/artist-portfolio"  # Only if your repo is not using a custom domain
-url: "https://jrwxd.github.io"
+url: "https://jrwxd.github.io/artist-portfolio"
 
 # Build settings
 markdown: kramdown
